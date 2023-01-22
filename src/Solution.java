@@ -24,20 +24,22 @@ Car asd = new Car("Lada",
                 "677",
                 1990,
                 "Россия",
-                70 );
+                "желтый",
+                70);
 
         Transport.Bus bus2 = new Bus("ЛиАЗ",
                 "677Б",
                 1989,
                 "Россия",
-                70 );
+                "желтый",
+                70);
 
         Transport.Bus bus3 = new Bus("ЛиАЗ",
                 "677В",
                 1987,
                 "Россия",
-                70 );
-
+                "желтый",
+                70);
 
 
         System.out.println(bus1);

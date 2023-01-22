@@ -79,7 +79,6 @@ public class Verifications {
             default:
                 return "Летняя резина";
         }
-
     }
 
     public static int verificationSpeed(int speed) {

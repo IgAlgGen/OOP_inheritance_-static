@@ -39,7 +39,6 @@ public class Car extends Transport {
     }
 
     private double engineVolume;
-    private String color;
     private String transmission;
     private final String bodyType;
     private String registrationNumber;
@@ -51,7 +50,7 @@ public class Car extends Transport {
                String model,
                int year,
                String country,
-               int speed,
+               int maxSpeed,
                double engineVolume,
                String color,
                String transmission,
@@ -59,9 +58,8 @@ public class Car extends Transport {
                String registrationNumber,
                int numberOfSeats,
                Key key) {
-        super(brand, model, year, country, speed);
+        super(brand, model, year, country, color, maxSpeed);
         setEngineVolume(engineVolume);
-        setColor(color);
         setTransmission(transmission);
         this.bodyType = verificationBodyType(bodyType);
         setRegistrationNumber(registrationNumber);
@@ -72,10 +70,6 @@ public class Car extends Transport {
 
     public void setEngineVolume(double engineVolume) {
         this.engineVolume = verificationEngineVolume(engineVolume);
-    }
-
-    public void setColor(String color) {
-        this.color = verificationColor(color);
     }
 
     public void setTransmission(String transmission) {
@@ -93,10 +87,6 @@ public class Car extends Transport {
 
     public String getTransmission() {
         return transmission;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public String getBodyType() {
@@ -125,7 +115,6 @@ public class Car extends Transport {
     public String toString() {
         return "Car{" +
                 "engineVolume=" + engineVolume +
-                ", color='" + color + '\'' +
                 ", transmission='" + transmission + '\'' +
                 ", bodyType='" + bodyType + '\'' +
                 ", registrationNumber='" + registrationNumber + '\'' +

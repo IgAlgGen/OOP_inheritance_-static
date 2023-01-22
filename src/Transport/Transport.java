@@ -1,31 +1,30 @@
 package Transport;
+
 import static Transport.Verifications.*;
 
 public class Transport {
-    private String brand;
-    private String model;
+    private final String brand;
+    private final String model;
     private final int year;
     private final String country;
-    private int speed;
+    private String color;
+    private int maxSpeed;
 
-    public Transport(String brand, String model, int year, String country, int speed) {
+    public Transport(String brand, String model, int year, String country,String color, int speed) {
         this.brand = verificationBrand(brand);
         this.model = verificationModel(model);
         this.year = verificationYear(year);
         this.country = verificationCountry(country);
-        this.speed = verificationSpeed(speed);
+        this.color = verificationColor(color);
+        this.maxSpeed = verificationSpeed(speed);
     }
 
-    public void setBrand(String brand) {
-        this.brand = verificationBrand(brand);
+    public void setColor(String color) {
+        this.color = verificationColor(color);
     }
 
-    public void setModel(String model) {
-        this.model = verificationModel(model);
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = verificationSpeed(speed);
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = verificationSpeed(maxSpeed);
     }
 
     public String getBrand() {
@@ -44,8 +43,8 @@ public class Transport {
         return country;
     }
 
-    public int getSpeed() {
-        return speed;
+    public int getMaxSpeed() {
+        return maxSpeed;
     }
 
     @Override
@@ -55,7 +54,8 @@ public class Transport {
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 ", country='" + country + '\'' +
-                ", speed=" + speed +
+                ", color='" + color + '\'' +
+                ", maxSpeed=" + maxSpeed +
                 '}';
     }
 }
